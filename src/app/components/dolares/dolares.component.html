@@ -1,0 +1,33 @@
+<div id="container" >
+    <div id="dolares">
+      <h4>Dolares</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo de cambio</mat-label>
+        <mat-select [(value)]="nombre" >
+          <mat-option *ngFor="let dolares of dolaresList" [value]="dolares">
+            {{dolares}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    
+    <form class="example-form">
+        <h4>Cantidad de pesos a convertir</h4>
+        <mat-form-field class="example-full-width">
+        <mat-label>Pesos Argentinos</mat-label>
+        <span matPrefix>$ &nbsp;</span>
+        <input type="number" matInput placeholder="000" #pesos>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" id="acceptar" (click)="convertir()">Convertir</button>
+    
+</div>
+<div id="peso_dolar" class="container-card">
+    <mat-card>
+        <mat-card-content>
+        <h2>Valor de pesos a dolar</h2>
+        <span>{{ valorCambio }}</span>
+        </mat-card-content>
+    </mat-card>
+</div>
