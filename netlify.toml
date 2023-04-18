@@ -1,2 +1,2 @@
 [build]
-    publish = "Conversor\src\index.html"
+    publish = "src\index.html"
