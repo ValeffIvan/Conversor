@@ -3,9 +3,9 @@ import { MatSelectChange } from '@angular/material/select';
 import { DolarService } from 'src/app/services/dolar.service';
 
 @Component({
-  selector: 'app-PesoADolar',
-  templateUrl: './PesoADolar.component.html',
-  styleUrls: ['./PesoADolar.component.scss']
+  selector: 'app-peso-adolar',
+  templateUrl: './peso-adolar.component.html',
+  styleUrls: ['./peso-adolar.component.scss']
 })
 export class PesoADolarComponent {
   
@@ -33,7 +33,7 @@ export class PesoADolarComponent {
 
   async convertir() {
     let dolarconvertido = await this.dolarService.getDolarByName(this.nombre!);
-    let valorDolarObservable = await this.dolarService.getValorDolarByName(dolarconvertido);
+    let valorDolarObservable = await this.dolarService.getValorDolarByName(dolarconvertido,this.tipo);
     valorDolarObservable.subscribe((valorDolar: number) => {
       this.valorCambio = parseFloat(this.pesos?.nativeElement.value || "0") / valorDolar;
     });

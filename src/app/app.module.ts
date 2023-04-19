@@ -7,19 +7,24 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PesoADolarComponent } from './components/PesoADolar/PesoADolar.component';
+import { PesoADolarComponent } from './components/PesoADolar/peso-adolar.component';
+import { DolarAPesoComponent } from './components/dolar-apeso/dolar-apeso.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
+import { SeparadorComponent } from './components/separador/separador.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PesoADolarComponent,
+    DolarAPesoComponent,
+    SeparadorComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     NoopAnimationsModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

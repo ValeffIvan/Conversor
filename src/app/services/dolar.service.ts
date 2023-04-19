@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
-import { Observable, pluck, tap } from 'rxjs';
+import { Observable, tap, lastValueFrom, map} from 'rxjs';
 import { Dolar } from '../model/Dolar.Interface';
 
 @Injectable({
@@ -21,9 +21,9 @@ export class DolarService {
   }
   
   
-  async getValorDolarByName(nombre: string): Promise<Observable<number>> {
-    return this.http.get<any>(this.baseUrl + "v1/dolares/" + nombre).pipe(
-      pluck('venta')
+  getValorDolarByName(nombre: string, tipo: string): Observable<number> {
+    return this.http.get<any>(this.baseUrl + 'v1/dolares/' + nombre).pipe(
+      map(data => data[tipo.toLowerCase()])
     );
   }
     
@@ -34,7 +34,7 @@ export class DolarService {
   }
 
   async getDolarByName(nombre: string): Promise<string> {
-    await this.getDolares().toPromise();
+    await lastValueFrom(this.getDolares());
     const dolar = this.dolares.find(d => d.nombre.toLowerCase() === nombre.toLowerCase());
     console.log(dolar);
     return dolar ? dolar.casa : '';
