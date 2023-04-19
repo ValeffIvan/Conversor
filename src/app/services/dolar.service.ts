@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import{HttpClient} from '@angular/common/http';
-import { Observable, map, pluck, tap } from 'rxjs';
+import { Observable, pluck, tap } from 'rxjs';
 import { Dolar } from '../model/Dolar.Interface';
 
 @Injectable({

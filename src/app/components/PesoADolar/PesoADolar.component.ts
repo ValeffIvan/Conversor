@@ -3,16 +3,18 @@ import { MatSelectChange } from '@angular/material/select';
 import { DolarService } from 'src/app/services/dolar.service';
 
 @Component({
-  selector: 'app-dolares',
-  templateUrl: './dolares.component.html',
-  styleUrls: ['./dolares.component.scss']
+  selector: 'app-PesoADolar',
+  templateUrl: './PesoADolar.component.html',
+  styleUrls: ['./PesoADolar.component.scss']
 })
-export class DolaresComponent {
+export class PesoADolarComponent {
   
   dolaresList: string[] = [];
+  tipoList : string []=["Compra","Venta"];
   valorCambio: number | undefined;
   @ViewChild('pesos') pesos: ElementRef | undefined;
   nombre: string = "";
+  tipo: string = "";
 
   constructor(private dolarService: DolarService) {}
 

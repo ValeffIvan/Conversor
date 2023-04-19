@@ -1,5 +1,5 @@
 <div id="container" >
-    <div id="dolares">
+    <div class="dolares">
       <h4>Dolares</h4>
       <mat-form-field appearance="fill">
         <mat-label>Tipo de cambio</mat-label>
@@ -11,6 +11,17 @@
       </mat-form-field>
     </div>
 
+    <div class="dolares">
+      <h4>Compra/Venta</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Seleccione</mat-label>
+        <mat-select [(value)]="tipo" >
+          <mat-option *ngFor="let tipo of tipoList" [value]="tipo">
+            {{tipo}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     
     <form class="example-form">
         <h4>Cantidad de pesos a convertir</h4>

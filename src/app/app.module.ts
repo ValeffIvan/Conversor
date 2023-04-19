@@ -7,7 +7,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DolaresComponent } from './components/dolares/dolares.component';
+import { PesoADolarComponent } from './components/PesoADolar/PesoADolar.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
@@ -19,7 +19,7 @@ import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
-    DolaresComponent,
+    PesoADolarComponent,
   ],
   imports: [
     BrowserModule,
