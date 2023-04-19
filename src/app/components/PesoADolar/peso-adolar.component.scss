@@ -1,8 +1,8 @@
 #container {
-    display: flex;
-    margin-top:5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
   }
 
   .dolares{
@@ -13,13 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .container-card {
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 5%;
   }
 
   #acceptar{
     margin-left: 5%;
-    margin-top: 4%;
+    margin-top: 1%;
   }

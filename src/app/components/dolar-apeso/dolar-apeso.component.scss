@@ -1,25 +1,22 @@
 #container {
     display: flex;
-    margin-top:5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-  }
-
-  .dolares{
-    margin-right: 10%;
-  }
-
-  .container-card {
-    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .container-card {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  #acceptar{
-    margin-left: 5%;
-    margin-top: 4%;
-  }
+    margin-top: 3%;
+    }
+  
+    .dolares{
+      margin-right: 10%;
+    }
+  
+    .container-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5%;
+    }
+  
+    #acceptar{
+      margin-left: 5%;
+      margin-top: 1%;
+    }
